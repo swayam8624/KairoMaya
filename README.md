@@ -12,3 +12,14 @@ PYTHONPATH=../KairoPipelineCore/src:python \
 
 The real `maya.cmds` and API 2.0 adapter is guarded. Native Maya verification
 is a separate release gate and is never inferred from mocks.
+
+## Production behavior
+
+- API 2.0 mesh snapshots plus Maya command-layer scene/reference inspection;
+- dockable results with navigation back to the failing production node;
+- bounded diagnostics: SceneDoctor never silently freezes transforms, repairs
+  topology, strips unknown plugins, or rewrites reference namespaces;
+- dry-run and atomic asset publication with SHA-256 verified dependencies.
+
+See [the artist workflow](docs/artist-workflow.md) for installation and the
+native release checklist.

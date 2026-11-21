@@ -1,3 +1,7 @@
+# SOURCE STUDY NOTE:
+# Pure immutable snapshot checks for reference paths, topology, names and profile limits.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 import unittest
 
 from kairo_maya.scenedoctor import *

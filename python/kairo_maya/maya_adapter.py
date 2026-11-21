@@ -1,3 +1,4 @@
+# TEACHING MAP: Maya API translation boundary reads scene data for SceneDoctor and publisher. Preserve Maya-specific node/reference semantics and separate them from portable KairoPipelineCore validation.
 """Guarded Maya API 2.0 adapter for SceneDoctor."""
 
 from __future__ import annotations

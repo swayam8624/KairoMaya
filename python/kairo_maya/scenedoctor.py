@@ -1,3 +1,9 @@
+# TEACHING MAP — python/kairo_maya/scenedoctor.py
+# Pure scene/reference inspection and diagnostic rules. Native adapter supplies a snapshot,
+# while publisher consumes validated outputs; diagnostics should not mutate the live Maya
+# scene.
+# Follow READING_ORDER.md for native-host and portable publish API boundaries.
+
 """Host-neutral Maya scene validation rules."""
 
 from __future__ import annotations

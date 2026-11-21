@@ -1,3 +1,8 @@
+# TEACHING MAP — tests/test_scenedoctor.py
+# Tests portable scene diagnostics and invalid data handling; should not require Maya
+# installation to verify rules.
+# Follow READING_ORDER.md for native-host and portable publish API boundaries.
+
 import unittest
 
 from kairo_maya.scenedoctor import *

@@ -1,3 +1,8 @@
+# TEACHING MAP — python/kairo_maya/maya_adapter.py
+# Maya API 2.0/Qt adapter that inspects native DAG/reference data and maps it to portable
+# SceneDoctor types. Host-dependent operations need Maya-native verification.
+# Follow READING_ORDER.md for native-host and portable publish API boundaries.
+
 """Guarded Maya API 2.0 adapter for SceneDoctor."""
 
 from __future__ import annotations

@@ -1,3 +1,8 @@
+# TEACHING MAP — python/kairo_maya/__init__.py
+# Package API for portable scene diagnostics and publishing. Native Maya API access belongs
+# to maya_adapter.py, keeping SceneDoctor logic independently testable.
+# Follow READING_ORDER.md for native-host and portable publish API boundaries.
+
 """Kairo Maya SceneDoctor public API."""
 
 from .scenedoctor import (

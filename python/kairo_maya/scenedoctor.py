@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Host-neutral scene preflight rules: validates transforms, scene units/timeline, references, meshes,
+# UVs, materials and texture paths to structured diagnostics without mutating the scene.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 """Host-neutral Maya scene validation rules."""
 
 from __future__ import annotations

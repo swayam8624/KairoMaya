@@ -1,3 +1,8 @@
+# TEACHING MAP — python/kairo_maya/publisher.py
+# Plans output manifests, hashes and atomic publish through KairoPipelineCore. Separate
+# non-mutating planning from actual file writes and source ownership.
+# Follow READING_ORDER.md for native-host and portable publish API boundaries.
+
 """Validated immutable Maya scene publication."""
 
 from __future__ import annotations

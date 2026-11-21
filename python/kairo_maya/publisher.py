@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Validates snapshot before publishing referenced source/dependencies via KairoPipelineCore
+# fingerprints and immutable manifests; dry-run and replacement semantics belong to shared publisher.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 """Validated immutable Maya scene publication."""
 
 from __future__ import annotations

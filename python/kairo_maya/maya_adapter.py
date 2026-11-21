@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Guarded maya.cmds/OpenMaya 2.0 adapter snapshots native mesh/reference/scene state. Calls
+# scenedoctor.py pure checks and retains no mutable Maya object references in snapshots.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 """Guarded Maya API 2.0 adapter for SceneDoctor."""
 
 from __future__ import annotations

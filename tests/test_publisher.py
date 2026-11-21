@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Staged publish, hash validation, preflight blockers and rollback-related host-independent
+# assertions.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest

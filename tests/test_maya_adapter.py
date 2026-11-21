@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Guarded Maya adapter and missing-host behaviors; standard Python tests are not proof of native Maya
+# 2.0 API integration.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 import unittest
 
 from kairo_maya.maya_adapter import _inside, _portable_path, require_maya

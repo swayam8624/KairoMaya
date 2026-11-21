@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Validates snapshot before publishing referenced source/dependencies via KairoPipelineCore
+# fingerprints and immutable manifests; dry-run and replacement semantics belong to shared publisher.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 """Validated immutable Maya scene publication."""
 
 from __future__ import annotations
@@ -22,6 +27,9 @@ class ScenePublishResult:
     dry_run: bool
 
 
+# Teaching: block publication on SceneDoctor errors and verify referenced
+# files with KairoPipelineCore before atomic destination creation. The
+# dry-run plan must leave the destination unchanged.
 def publish_scene(project_root: Path, snapshot: SceneSnapshot, profile: SceneProfile,
                   *, project_name: str, asset_name: str, version: int,
                   dry_run: bool = False, replace: bool = False) -> ScenePublishResult:

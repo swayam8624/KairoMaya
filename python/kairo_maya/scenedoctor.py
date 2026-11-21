@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Host-neutral scene preflight rules: validates transforms, scene units/timeline, references, meshes,
+# UVs, materials and texture paths to structured diagnostics without mutating the scene.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 """Host-neutral Maya scene validation rules."""
 
 from __future__ import annotations
@@ -74,6 +79,9 @@ class SceneProfile:
             raise ValueError("profile first frame must not exceed last frame")
 
 
+# Teaching: pure SceneSnapshot/Profile preflight rules produce navigable
+# DiagnosticBag entries but deliberately never mutate Maya's original scene.
+# Publisher and host UI consume these exact diagnostic codes.
 def validate_scene(snapshot: SceneSnapshot, profile: SceneProfile) -> DiagnosticBag:
     bag = DiagnosticBag()
     if not snapshot.saved:

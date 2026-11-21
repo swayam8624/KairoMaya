@@ -1,5 +1,7 @@
 # Kairo Maya SceneDoctor
 
+> **Learn from source:** [Source teaching guide](docs/SOURCE_READING_ORDER.md) follows guarded Maya API 2.0 snapshots, SceneDoctor diagnostics, Maya publishing and KairoPipelineCore; native application tests remain distinct from pure Python validation. Existing project [LICENSE](LICENSE) is preserved; third-party DCC packages and assets retain their own terms.
+
 SceneDoctor is a Maya scene preflight for references, namespaces, transforms,
 units, timelines, mesh topology, UVs, materials, textures, and unknown plugins.
 It presents deterministic diagnostics in a dockable artist panel and keeps the

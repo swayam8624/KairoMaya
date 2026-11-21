@@ -1,3 +1,8 @@
+# SOURCE STUDY NOTE:
+# Guarded maya.cmds/OpenMaya 2.0 adapter snapshots native mesh/reference/scene state. Calls
+# scenedoctor.py pure checks and retains no mutable Maya object references in snapshots.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 """Guarded Maya API 2.0 adapter for SceneDoctor."""
 
 from __future__ import annotations
@@ -25,6 +30,9 @@ def require_maya() -> tuple[Any, Any]:
     return _cmds, _om
 
 
+# Teaching: this is the guarded native Maya API boundary. Convert live
+# scene references, mesh attributes and timeline settings to a stable
+# SceneSnapshot, then call host-neutral scenedoctor.py validation.
 def inspect_scene(profile: SceneProfile | None = None):
     """Snapshot the open Maya scene and return deterministic diagnostics."""
 

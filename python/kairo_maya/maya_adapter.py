@@ -30,6 +30,9 @@ def require_maya() -> tuple[Any, Any]:
     return _cmds, _om
 
 
+# Teaching: this is the guarded native Maya API boundary. Convert live
+# scene references, mesh attributes and timeline settings to a stable
+# SceneSnapshot, then call host-neutral scenedoctor.py validation.
 def inspect_scene(profile: SceneProfile | None = None):
     """Snapshot the open Maya scene and return deterministic diagnostics."""
 

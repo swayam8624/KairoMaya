@@ -1,3 +1,8 @@
+# TEACHING MAP — tests/test_maya_adapter.py
+# Uses simulated Maya APIs to test adapter mapping; native GUI integration and host-version
+# compatibility remain separate gates.
+# Follow READING_ORDER.md for native-host and portable publish API boundaries.
+
 import unittest
 
 from kairo_maya.maya_adapter import _inside, _portable_path, require_maya

@@ -24,3 +24,27 @@ Maya API adapters inspect scene content, run preflight and publish to PipelineCo
 - Follow upstream interfaces before implementation details; distinguish implemented, host-verified and planned features.
 - Run available tests at a pinned commit and consult [STATUS.md](../STATUS.md) / [STATUS.yaml](../STATUS.yaml) before declaring completion.
 - Reuse original contributions under [LICENSE](../LICENSE), subject to third-party code and asset terms.
+
+
+## Complete source-file inventory
+
+After the curated teaching path, follow this deterministic inventory of first-party source, scripts, shaders, and tests. Grouping is a suggested learning order, not an indication that every function is already annotated. Vendored dependencies, ROMs, binaries, data, media, and generated evidence are excluded.
+
+### Implementation and other source (4)
+
+1. [`python/kairo_maya/__init__.py`](../python/kairo_maya/__init__.py)
+2. [`python/kairo_maya/maya_adapter.py`](../python/kairo_maya/maya_adapter.py)
+3. [`python/kairo_maya/publisher.py`](../python/kairo_maya/publisher.py)
+4. [`python/kairo_maya/scenedoctor.py`](../python/kairo_maya/scenedoctor.py)
+
+### Automation and tooling (1)
+
+1. [`scripts/userSetup.py`](../scripts/userSetup.py)
+
+### Verification and tests (3)
+
+1. [`tests/test_maya_adapter.py`](../tests/test_maya_adapter.py)
+2. [`tests/test_publisher.py`](../tests/test_publisher.py)
+3. [`tests/test_scenedoctor.py`](../tests/test_scenedoctor.py)
+
+Snapshot totals: 8 first-party source/build/test files, 21 tracked files overall. Re-audit when files are renamed or added.

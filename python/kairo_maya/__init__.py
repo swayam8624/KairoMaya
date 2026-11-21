@@ -1,3 +1,7 @@
+# SOURCE STUDY NOTE:
+# Package surface separating host Maya API access from pure SceneSnapshot/SceneProfile validation.
+# See docs/SOURCE_READING_ORDER.md for host → preflight → publish flow.
+
 """Kairo Maya SceneDoctor public API."""
 
 from .scenedoctor import (

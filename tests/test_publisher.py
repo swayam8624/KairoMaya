@@ -1,3 +1,8 @@
+# TEACHING MAP — tests/test_publisher.py
+# Tests manifest, hashing, staging and failure rollback of Maya outputs using shared
+# KairoPipelineCore contracts.
+# Follow READING_ORDER.md for native-host and portable publish API boundaries.
+
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest

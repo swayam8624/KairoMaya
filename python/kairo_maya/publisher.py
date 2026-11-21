@@ -27,6 +27,9 @@ class ScenePublishResult:
     dry_run: bool
 
 
+# Teaching: block publication on SceneDoctor errors and verify referenced
+# files with KairoPipelineCore before atomic destination creation. The
+# dry-run plan must leave the destination unchanged.
 def publish_scene(project_root: Path, snapshot: SceneSnapshot, profile: SceneProfile,
                   *, project_name: str, asset_name: str, version: int,
                   dry_run: bool = False, replace: bool = False) -> ScenePublishResult:

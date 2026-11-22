@@ -1,3 +1,13 @@
+# TEACHING MODULE: A Maya adapter reads references, transforms,
+# mesh topology and textures into detached snapshots; SceneDoctor
+# validates those values without requiring an installed Maya runtime.
+# Diagnostic severity/code decides whether the Maya publishing operator
+# should proceed. The live DAG node graph remains host-owned; this module
+# only reads normalized data and does not rewrite artist content.
+#
+# Portable path validation and publication hashes are provided by
+# KairoPipelineCore; a green static diagnostic check is not proof of
+# a licensed Maya export or a successful consumer import.
 """Host-neutral Maya scene validation rules."""
 
 from __future__ import annotations
@@ -74,6 +84,8 @@ class SceneProfile:
             raise ValueError("profile first frame must not exceed last frame")
 
 
+# Central preflight entry: enforce profile policies across referenced
+# projects, transform conventions, mesh geometry and external textures.
 def validate_scene(snapshot: SceneSnapshot, profile: SceneProfile) -> DiagnosticBag:
     bag = DiagnosticBag()
     if not snapshot.saved:

@@ -1,4 +1,5 @@
 # Teaching source map — KairoMaya
+**Worked source walkthrough:** [Maya references/transforms → SceneDoctor → shared publish](https://github.com/swayam8624/KairoPipelineCore/blob/docs/teaching-walkthrough-20261121/docs/CROSS_DCC_PUBLICATION_WALKTHROUGH.md).
 
 Maya scene inspection and versioned export/publication.
 

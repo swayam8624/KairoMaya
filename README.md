@@ -1,5 +1,7 @@
 # Kairo Maya SceneDoctor
 
+**Study the implementation:** [linked file-reading order](docs/SOURCE_READING_ORDER.md) · [Maya SceneDoctor and immutable publication](https://github.com/swayam8624/KairoPipelineCore/blob/docs/teaching-walkthrough-20261121/docs/CROSS_DCC_PUBLICATION_WALKTHROUGH.md).
+
 SceneDoctor is a Maya scene preflight for references, namespaces, transforms,
 units, timelines, mesh topology, UVs, materials, textures, and unknown plugins.
 It presents deterministic diagnostics in a dockable artist panel and keeps the

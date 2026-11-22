@@ -1,3 +1,12 @@
+# TEACHING MODULE: A host-collected Maya SceneSnapshot is checked with
+# SceneDoctor, then converted into immutable file declarations for
+# KairoPipelineCore. Source fingerprints and contained project paths
+# must remain stable from planning through staged publication.
+#
+# publish_scene returns a report; it does not load a KairoRenderer GPU
+# texture or certify the same Maya scene was successfully rendered.
+# Native Maya extraction lives in maya_adapter.py; no Maya license is
+# required for these portable Python policy tests.
 """Validated immutable Maya scene publication."""
 
 from __future__ import annotations
@@ -22,6 +31,8 @@ class ScenePublishResult:
     dry_run: bool
 
 
+# Refuse invalid scene snapshots before publishing source files.
+# Distinguish dry-run preview from an actual new immutable version.
 def publish_scene(project_root: Path, snapshot: SceneSnapshot, profile: SceneProfile,
                   *, project_name: str, asset_name: str, version: int,
                   dry_run: bool = False, replace: bool = False) -> ScenePublishResult:
